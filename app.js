@@ -1,6 +1,6 @@
 const express = require("express")
 const app=express();
-
+const port = process.env.PORT || 8000
 
 app.get("/",async(req,res)=>{
 res.send({msg:"success"})
@@ -33,6 +33,6 @@ app.get("/get/new",async(req,res)=>{
 
 })
 // hello
-app.listen(8000,()=>{
+app.listen(port,()=>{
     console.log("server runing on port 8000");
 })
